@@ -14,7 +14,6 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-//authentication 给不同的claim
 builder.Services
     .AddAuthentication()
     .AddScheme<AuthenticationSchemeOptions, EshopHandler>("EshopAuthentication", null);
