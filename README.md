@@ -6,7 +6,7 @@
   <li>password: admin123</li>
 </ul>
 <p>The Restful API interface is still under process though we have some endpoints already. Those Endpoints can be seen as demo to show my basic knowledge of .net API devolopment.</p>
-<p>The following list is the current working endpoints</p>
+<p>The following list is the current working endpoints. I am planning to finish other endpoints within 2 days such as product searching and access certain product information</p>
 <ul>
   <li>https://eshopapidemo.azurewebsites.net/api/ViewProducts</li>
   <li>https://eshopapidemo.azurewebsites.net/admin/ListAllProductsAdmin</li>
