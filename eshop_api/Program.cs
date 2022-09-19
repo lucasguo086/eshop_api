@@ -21,6 +21,7 @@ builder.Services
 builder.Services.AddDbContext<EshopDbContext>(
     options => options.UseSqlServer($"Server=tcp:lucasguo811.database.windows.net,1433;Initial Catalog=eshop;Persist Security Info=False;User ID={Encoding.UTF8.GetString(Convert.FromBase64String(Key.User))};Password={Encoding.UTF8.GetString(Convert.FromBase64String(Key.Psw))};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
 );
+builder.Services.AddCors();
 builder.Services.AddControllers();
 builder.Services.AddScoped<IEshopRepo, EshopRepo>();
 builder.Services.AddAuthorization(options =>
@@ -39,7 +40,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseCors(opt =>
+{
+    opt.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+});
 app.UseAuthentication();
 app.UseAuthorization();
 

@@ -9,7 +9,7 @@ using eshop_api.Model;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 
-    [Route("admin")]
+    [Route("api")]
     [ApiController]
     public class EshopController : Controller
     {
